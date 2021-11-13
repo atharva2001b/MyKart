@@ -15,8 +15,12 @@
         <entry key="app/src/main/res/drawable/ic_outline_search_24.xml" value="0.13958333333333334" />
         <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.13958333333333334" />
         <entry key="app/src/main/res/drawable/searchbar.xml" value="0.2598958333333333" />
+        <entry key="app/src/main/res/drawable/tab_indicator_default.xml" value="0.2598958333333333" />
+        <entry key="app/src/main/res/drawable/tab_indicator_selected.xml" value="0.2598958333333333" />
+        <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.2598958333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2571496704046458" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2296875" />
+        <entry key="app/src/main/res/layout/fragment_offer_viewp_pager_row.xml" value="0.1710649134251145" />
         <entry key="app/src/main/res/layout/header_layout.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/rv_row_test.xml" value="0.20849628825000857" />
         <entry key="app/src/main/res/menu/cart.xml" value="0.24375" />
