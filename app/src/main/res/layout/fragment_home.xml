@@ -11,27 +11,63 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_marginTop="60dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/offer_gradient_layout"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@drawable/offers_gradient"
+                android:orientation="horizontal"/>
+
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager_offer"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"/>
+                android:layout_height="200dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabl_offer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabGravity="center"
+                android:layout_height="20dp"
+                android:layout_below="@+id/viewpager_offer"
+                android:layout_marginTop="-5dp"
+                android:background="@android:color/transparent"
                 app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
                 app:tabIndicatorHeight="0dp"
-                app:tabMaxWidth="10dp"/>
+                app:tabMaxWidth="10dp" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/txt_todaysdeals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabl_offer"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Today's Deals!"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_todaysdeals"
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+                android:layout_below="@+id/txt_todaysdeals"
+                android:layout_marginTop="-5dp"
+                android:padding="10dp" />
+
+
+
+
+
+        </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>
 

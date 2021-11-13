@@ -30,4 +30,6 @@ public class OfferViewPagerAdapter extends FragmentStateAdapter {
     public int getItemCount() {
         return offerFragments.size();
     }
+
+
 }
