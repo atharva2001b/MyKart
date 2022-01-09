@@ -1,6 +1,8 @@
 package com.example.mykart;
 
 
+import static com.example.mykart.util.StringMatch.lock_match;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,7 @@ import android.widget.Toolbar;
 
 import com.example.mykart.adapters.TestAdapter;
 import com.example.mykart.fragments.home;
+import com.example.mykart.util.StringMatch;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.navigation.NavigationView;
 
@@ -64,12 +67,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.navView);
         navigationView.setNavigationItemSelectedListener(this);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame, Home).commit();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame, Home).addToBackStack("home").commit();
+
+
 
 
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            // No backstack to pop, so calling super
+            super.onBackPressed();
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame, Home).commit();
+            getSupportFragmentManager().popBackStack();
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

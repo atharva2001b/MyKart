@@ -128,7 +128,7 @@ public class home extends Fragment {
         rv_deals.setAdapter(dealsRecyclerAdapter);
 
 
-        JsonArrayRequest prodRequest = new JsonArrayRequest(Request.Method.GET, "https://fakestoreapi.com/products?limit=10", null,
+        JsonArrayRequest prodRequest = new JsonArrayRequest(Request.Method.GET, "https://fakestoreapi.com/products", null,
                 new Response.Listener<JSONArray>()
                 {
                     @Override
@@ -163,7 +163,6 @@ public class home extends Fragment {
 
         RequestQueue queue = Volley.newRequestQueue(getContext());
         queue.add(prodRequest);
-
 
 
 
@@ -256,6 +255,5 @@ public class home extends Fragment {
             vpOffer.setCurrentItem(0);
         }
     };
-
 
 }
