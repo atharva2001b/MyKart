@@ -42,4 +42,10 @@ dependencies {
 
     //color extraction
     implementation 'com.android.support:palette-v7:30.3.0'
+
+    //okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+
+    //volley
+    implementation 'com.android.volley:volley:1.2.1'
 }
